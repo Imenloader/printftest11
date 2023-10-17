@@ -62,7 +62,18 @@ case 'c':
 characters_printed += _printf_char(va_arg(list, int));
 break;
 case 's':
-characters_printed += _printf_string(va_arg(list, char *));
+{
+char *s = va_arg(list, char *);
+if (s == NULL)
+{
+write(1, "(null)", 6);
+characters_printed += 6;
+}
+else
+{
+characters_printed += _printf_string(s);
+}
+}
 break;
 }
 }
@@ -71,4 +82,3 @@ format++;
 va_end(list);
 return (characters_printed);
 }
-
