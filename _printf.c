@@ -63,6 +63,12 @@ break;
 case 's':
 characters_printed += _printf_string(va_arg(list, char *));
 break;
+case 'd':
+characters_printed += printf("%d", va_arg(list, int));
+break;
+case 'i':
+characters_printed += printf("%i", va_arg(list, int));
+break;
 default:
 return (0);
 }
