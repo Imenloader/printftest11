@@ -22,8 +22,7 @@ int _printf_string(char *s)
 {
 if (s == NULL)
 {
-write(1, "(null)", 6);
-return (6);
+return (0);
 }
 else
 {
@@ -37,7 +36,7 @@ return (strlen(s));
  * @format: The format string.
  * @...: Variable arguments.
  *
- * Return: The number of characters printed.
+ * Return: The number of characters printed
  */
 int _printf(const char *format, ...)
 {
@@ -62,19 +61,10 @@ case 'c':
 characters_printed += _printf_char(va_arg(list, int));
 break;
 case 's':
-{
-char *s = va_arg(list, char *);
-if (s == NULL)
-{
-write(1, "(null)", 6);
-characters_printed += 6;
-}
-else
-{
-characters_printed += _printf_string(s);
-}
-}
+characters_printed += _printf_string(va_arg(list, char *));
 break;
+default:
+return (0);
 }
 }
 format++;
