@@ -20,16 +20,15 @@ return (1);
  */
 int _printf_string(char *s)
 {
-int characters_printed = 0;
 if (s == NULL)
 {
-characters_printed += write(1, "(null)", 6);
+return (0);
 }
 else
 {
-characters_printed += write(1, s, strlen(s));
+write(1, s, strlen(s));
+return (strlen(s));
 }
-return (characters_printed);
 }
 
 /**
@@ -71,7 +70,6 @@ case 'i':
 characters_printed += printf("%i", va_arg(list, int));
 break;
 default:
-va_end(list);
 return (0);
 }
 }
@@ -80,4 +78,3 @@ format++;
 va_end(list);
 return (characters_printed);
 }
-
