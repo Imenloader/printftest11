@@ -22,8 +22,7 @@ int _printf_string(char *s)
 {
 if (s == NULL)
 {
-write(1, "(null)", 6);
-return (6);
+return (0);
 }
 else
 {
@@ -31,7 +30,6 @@ write(1, s, strlen(s));
 return (strlen(s));
 }
 }
-
 
 /**
  * _printf - Printf function.
@@ -67,7 +65,6 @@ characters_printed += _printf_string(va_arg(list, char *));
 break;
 default:
 return (0);
-break;
 }
 }
 format++;
