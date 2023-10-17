@@ -65,6 +65,9 @@ break;
 case 's':
 characters_printed += _printf_string(va_arg(list, char *));
 break;
+default:
+return (0);
+break;
 }
 }
 format++;
