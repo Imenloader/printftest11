@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdarg.h>
 
 /**
  * _printf_char - Print a character.
