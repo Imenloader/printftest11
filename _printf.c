@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdarg.h>
-#include <unistd.h>
-#include <string.h>
-
+#include "main.h"
 /**
 * _printf_char - Print a character.
 * @list: Variable argument list.
