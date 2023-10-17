@@ -10,6 +10,7 @@ char character = va_arg(*list, int);
 write(1, &character, 1);
 return (1);
 }
+
 /**
 * _printf_string - Print a string.
 * @list: Variable argument list.
@@ -21,11 +22,12 @@ char *string = va_arg(*list, char *);
 write(1, string, strlen(string));
 return (strlen(string));
 }
+
 /**
 * _printf - Printf function.
 * @format: Format string.
 * ...: Variable arguments.
-* Return: Number of characters printed (excluding the null byte used to end output to strings)
+* Return: Number of characters printed.
 */
 int _printf(const char *format, ...)
 {
@@ -61,6 +63,7 @@ format++;
 va_end(list);
 return (characters_printed);
 }
+
 /**
 * main - Entry point for the program.
 * @void: No arguments.
