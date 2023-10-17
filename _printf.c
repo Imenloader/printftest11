@@ -27,9 +27,9 @@ return (strlen(s));
 /**
  * _printf - Printf function.
  * @format: The format string.
- * @...: Variable arguments.
+ * ...: Variable arguments.
  *
- * Return: The number of characters printed.
+ * Return: The number of characters
  */
 int _printf(const char *format, ...)
 {
